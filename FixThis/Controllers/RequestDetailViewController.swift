@@ -8,8 +8,9 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Firebase
 
-class RequestDetailViewController: UIViewController {
+class RequestDetailViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var originalTextView: UITextView!
     @IBOutlet weak var revisedTextView: UITextView!
@@ -17,11 +18,15 @@ class RequestDetailViewController: UIViewController {
     
     var request: Request!
     
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         IQKeyboardManager.shared.enable = true
+        originalTextView.delegate = self
+        revisedTextView.delegate = self
         originalTextView.text = request.original
         revisedTextView.text = request.revised
         isCompleteSwitch.setOn(request.isComplete, animated: false)
@@ -36,7 +41,30 @@ class RequestDetailViewController: UIViewController {
         revisedTextView.text = originalTextView.text
     }
     
-    @IBAction func switchPressed(_ sender: UISwitch) {
-        // TODO: update isComplete on Firebase
+    func textViewDidEndEditing(_ textView: UITextView) {
+        updateData()
+    }
+    
+    @IBAction func completeSwitchPressed(_ sender: UISwitch) {
+        updateData()
+    }
+    
+    private func updateData() {
+        // update data on Firebase
+        db.collection("requests").document(request.documentId).setData([
+            "original": originalTextView.text ?? "",
+            "revised": revisedTextView.text ?? "",
+            "isComplete": isCompleteSwitch.isOn,
+            "timestamp": Date().timeIntervalSince1970
+        ]) { error in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: "Error while updating data\n\(error)", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
+        request.isComplete = isCompleteSwitch.isOn
     }
 }
