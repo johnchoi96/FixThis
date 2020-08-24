@@ -29,7 +29,15 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
         revisedTextView.delegate = self
         originalTextView.text = request.original
         revisedTextView.text = request.revised
+        
+        originalTextView.layer.cornerRadius = 15
+        revisedTextView.layer.cornerRadius = 15
         isCompleteSwitch.setOn(request.isComplete, animated: false)
+        
+        if isCompleteSwitch.isOn {
+            revisedTextView.isEditable = false
+            revisedTextView.backgroundColor = .lightGray
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -66,5 +74,13 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
         }
         
         request.isComplete = isCompleteSwitch.isOn
+        
+        if isCompleteSwitch.isOn {
+            revisedTextView.isEditable = false
+            revisedTextView.backgroundColor = .lightGray
+        } else {
+            revisedTextView.isEditable = true
+            revisedTextView.backgroundColor = .white
+        }
     }
 }
