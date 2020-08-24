@@ -16,5 +16,6 @@ struct K {
     
     struct Segues {
         static let mainToSubmitRequest = "mainToSubmitRequest"
+        static let mainToRequestDetail = "mainToRequestDetail"
     }
 }

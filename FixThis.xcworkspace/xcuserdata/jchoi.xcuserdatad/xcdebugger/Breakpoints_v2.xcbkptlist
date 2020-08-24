@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A25132CD-433C-4045-BB40-F90864EC4217"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55747198-8514-4DF6-A671-E143E8B508F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FixThis/Controllers/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA3BADAF-D3C8-4FAD-8370-224199EF311E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FixThis/Models/FixThisManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "deleteRequest(id:index:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA3BADAF-D3C8-4FAD-8370-224199EF311E - 543cb7a3501ad017"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FixThis.FixThisManager.deleteRequest(id: Swift.String, index: Swift.Int) throws -&gt; ()"
+                  moduleName = "FixThis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jchoi/Swift%20Programs/FixThis/FixThis/Models/FixThisManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "EA3BADAF-D3C8-4FAD-8370-224199EF311E - f514f9a753c4d1b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FixThis.FixThisManager.deleteRequest(id: Swift.String, index: Swift.Int) throws -&gt; ()"
+                  moduleName = "FixThis"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jchoi/Swift%20Programs/FixThis/FixThis/Models/FixThisManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "78">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

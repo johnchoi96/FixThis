@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import Firebase
 
 class FixThisManager {
@@ -21,7 +22,7 @@ class FixThisManager {
     }
     
     func loadData() {
-        db.collection("requests").order(by: "timestamp").addSnapshotListener { (querySnapshot, error) in
+        db.collection("requests").order(by: "timestamp", descending: true).addSnapshotListener { (querySnapshot, error) in
             if self.requests.count > 0 {
                 self.requests.removeAll()
             }
@@ -40,5 +41,18 @@ class FixThisManager {
                 }
             }
         }
+    }
+    
+    func deleteRequest(id: String, index: Int) throws {
+        var errorHappened = false
+        db.collection("requests").document(id).delete { (error) in
+            if error != nil {
+                errorHappened = true
+            }
+        }
+        if errorHappened {
+            throw FirebaseError.deleteError("Error happened while deleting request")
+        }
+        requests.remove(at: index)
     }
 }

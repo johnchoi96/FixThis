@@ -17,6 +17,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         table.dataSource = self
+        table.delegate = self
         manager.delegate = self
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = UITableView.automaticDimension
@@ -38,6 +39,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: K.Segues.mainToRequestDetail, sender: manager.requests[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                try manager.deleteRequest(id: manager.requests[indexPath.row].documentId, index: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } catch let error as NSError {
+                let alert = UIAlertController(title: "Error", message: String(describing: error), preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
     @IBAction func addPressed(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: K.Segues.mainToSubmitRequest, sender: nil)
     }
@@ -46,6 +65,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == K.Segues.mainToSubmitRequest {
             let vc = segue.destination as! SubmitRequestViewController
             vc.manager = self.manager
+        }
+        if segue.identifier == K.Segues.mainToRequestDetail {
+            let vc = segue.destination as! RequestDetailViewController
+            vc.request = sender as? Request
         }
     }
 }
