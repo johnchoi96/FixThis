@@ -119,7 +119,7 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-AL-9W7">
                                                 <rect key="frame" x="0.0" y="354.66666666666663" width="355" height="250"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" red="0.72589418598291611" green="0.72844566328160332" blue="0.73610009517766495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="Wmy-ne-Pnl"/>
                                                 </constraints>

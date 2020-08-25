@@ -34,9 +34,12 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
         revisedTextView.layer.cornerRadius = 15
         isCompleteSwitch.setOn(request.isComplete, animated: false)
         
+        originalTextView.backgroundColor = .darkGray
+        originalTextView.textColor = .white
         if isCompleteSwitch.isOn {
             revisedTextView.isEditable = false
-            revisedTextView.backgroundColor = .lightGray
+            revisedTextView.backgroundColor = .darkGray
+            revisedTextView.textColor = .white
         }
     }
     
@@ -77,10 +80,12 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
         
         if isCompleteSwitch.isOn {
             revisedTextView.isEditable = false
-            revisedTextView.backgroundColor = .lightGray
+            revisedTextView.backgroundColor = .darkGray
+            revisedTextView.textColor = .white
         } else {
             revisedTextView.isEditable = true
-            revisedTextView.backgroundColor = .white
+            revisedTextView.backgroundColor = .opaqueSeparator
+            revisedTextView.textColor = .black
         }
     }
 }
