@@ -20,20 +20,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="293" height="90"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neg-XY-yDn">
-                                <rect key="frame" x="0.0" y="0.0" width="293" height="60"/>
+                                <rect key="frame" x="10" y="0.0" width="294" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CIM-KE-i3u">
-                                <rect key="frame" x="0.0" y="60" width="293" height="30"/>
+                                <rect key="frame" x="10" y="60" width="294" height="30"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7D-4m-SMu" userLabel="Placeholder View">
-                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i4m-wQ-DCu">
-                                        <rect key="frame" x="146.5" y="0.0" width="146.5" height="30"/>
+                                        <rect key="frame" x="147" y="0.0" width="147" height="30"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNw-nB-kuL" userLabel="Complete View">
                                                 <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
@@ -52,10 +52,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkC-hh-SBI" userLabel="Incomplete View">
-                                                <rect key="frame" x="73.5" y="0.0" width="73" height="30"/>
+                                                <rect key="frame" x="73.5" y="0.0" width="73.5" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incomplete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdC-6C-PKf">
-                                                        <rect key="frame" x="-6.5" y="5" width="85.5" height="20.5"/>
+                                                        <rect key="frame" x="-6" y="5" width="85.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -76,7 +76,9 @@
                             </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="neg-XY-yDn" secondAttribute="trailing" constant="10" id="Qpf-On-eJL"/>
                             <constraint firstAttribute="height" constant="90" id="gxe-kP-bYE"/>
+                            <constraint firstItem="neg-XY-yDn" firstAttribute="leading" secondItem="T1b-cW-bhB" secondAttribute="leading" constant="10" id="zWh-iN-46s"/>
                         </constraints>
                     </stackView>
                 </subviews>
