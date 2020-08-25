@@ -72,6 +72,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             vc.request = sender as? Request
         }
     }
+    
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 extension MainViewController: FirebaseDataUpdateDelegate {

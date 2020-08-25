@@ -26,6 +26,10 @@
 		D2836C3624F438EB00E6B453 /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C3524F438EB00E6B453 /* RequestDetailViewController.swift */; };
 		D2836C3924F440F500E6B453 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2836C3824F440F500E6B453 /* IQKeyboardManagerSwift */; };
 		D2836C3B24F47C2700E6B453 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C3A24F47C2700E6B453 /* Exception.swift */; };
+		D2836C3D24F49B5400E6B453 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C3C24F49B5400E6B453 /* WelcomeViewController.swift */; };
+		D2836C3F24F49B7700E6B453 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C3E24F49B7700E6B453 /* LogInViewController.swift */; };
+		D2836C4124F49B7F00E6B453 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C4024F49B7F00E6B453 /* SignUpViewController.swift */; };
+		D2836C4424F49F2300E6B453 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2836C4324F49F2300E6B453 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,9 @@
 		D2836C3324F3930600E6B453 /* FirebaseDataUpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataUpdateDelegate.swift; sourceTree = "<group>"; };
 		D2836C3524F438EB00E6B453 /* RequestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailViewController.swift; sourceTree = "<group>"; };
 		D2836C3A24F47C2700E6B453 /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
+		D2836C3C24F49B5400E6B453 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D2836C3E24F49B7700E6B453 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		D2836C4024F49B7F00E6B453 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2836C4424F49F2300E6B453 /* KeychainSwift in Frameworks */,
 				90C1E188C778EBE507591907 /* Pods_FixThis.framework in Frameworks */,
 				D2836C3924F440F500E6B453 /* IQKeyboardManagerSwift in Frameworks */,
 			);
@@ -136,6 +144,9 @@
 				D2836C2824F32F3E00E6B453 /* RequestTableViewCell.swift */,
 				D2836C2C24F333F000E6B453 /* SubmitRequestViewController.swift */,
 				D2836C3524F438EB00E6B453 /* RequestDetailViewController.swift */,
+				D2836C3C24F49B5400E6B453 /* WelcomeViewController.swift */,
+				D2836C3E24F49B7700E6B453 /* LogInViewController.swift */,
+				D2836C4024F49B7F00E6B453 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 			name = FixThis;
 			packageProductDependencies = (
 				D2836C3824F440F500E6B453 /* IQKeyboardManagerSwift */,
+				D2836C4324F49F2300E6B453 /* KeychainSwift */,
 			);
 			productName = FixThis;
 			productReference = D2836C0324F3209300E6B453 /* FixThis.app */;
@@ -211,6 +223,7 @@
 			mainGroup = D2836BFA24F3209300E6B453;
 			packageReferences = (
 				D2836C3724F440F500E6B453 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				D2836C4224F49F2300E6B453 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = D2836C0424F3209300E6B453 /* Products */;
 			projectDirPath = "";
@@ -290,9 +303,12 @@
 				D2836C3624F438EB00E6B453 /* RequestDetailViewController.swift in Sources */,
 				D2836C3424F3930600E6B453 /* FirebaseDataUpdateDelegate.swift in Sources */,
 				D2836C1E24F3216200E6B453 /* FixThisManager.swift in Sources */,
+				D2836C3F24F49B7700E6B453 /* LogInViewController.swift in Sources */,
 				D2836C0724F3209300E6B453 /* AppDelegate.swift in Sources */,
+				D2836C4124F49B7F00E6B453 /* SignUpViewController.swift in Sources */,
 				D2836C3B24F47C2700E6B453 /* Exception.swift in Sources */,
 				D2836C2724F328F600E6B453 /* Request.swift in Sources */,
+				D2836C3D24F49B5400E6B453 /* WelcomeViewController.swift in Sources */,
 				D2836C0924F3209300E6B453 /* SceneDelegate.swift in Sources */,
 				D2836C2524F3267F00E6B453 /* Constants.swift in Sources */,
 			);
@@ -510,6 +526,14 @@
 				minimumVersion = 6.5.6;
 			};
 		};
+		D2836C4224F49F2300E6B453 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -517,6 +541,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D2836C3724F440F500E6B453 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		D2836C4324F49F2300E6B453 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2836C4224F49F2300E6B453 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

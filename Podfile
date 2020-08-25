@@ -9,5 +9,6 @@ target 'FixThis' do
   pod 'Firebase'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Auth'
 
 end

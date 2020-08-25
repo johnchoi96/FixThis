@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LocalAuthentication
 
 struct K {
     struct Cells {
@@ -17,5 +18,23 @@ struct K {
     struct Segues {
         static let mainToSubmitRequest = "mainToSubmitRequest"
         static let mainToRequestDetail = "mainToRequestDetail"
+        static let loginToMain = "loginToMain"
+        static let signupToMain = "signupToMain"
+        static let welcomeToSignup = "welcomeToSignup"
+        static let welcomeToLogin = "welcomeToLogin"
+    }
+    
+    /**
+     Returns the available biometric authentication method available for this device.
+     Returns none if this device does not have a biometric authentication method. e.g. iPod Touch
+     */
+    static var BIOMETRIC_METHOD: String {
+        if LAContext().biometryType == .faceID {
+            return "Face ID"
+        } else if LAContext().biometryType == .touchID {
+            return "Touch ID"
+        } else {
+            return "Face ID/Touch ID"
+        }
     }
 }
