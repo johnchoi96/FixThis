@@ -28,7 +28,13 @@ class SubmitRequestViewController: UIViewController {
     
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
         if let originalText = textview.text {
-            db.collection("requests").addDocument(data: ["original": originalText, "revised": "", "isComplete": false, "timestamp": Date().timeIntervalSince1970]) { (error) in
+            db.collection("requests").addDocument(data: [
+                "original": originalText,
+                "revised": "",
+                "isComplete": false,
+                "timestamp": Date().timeIntervalSince1970,
+                "submitter": (Auth.auth().currentUser?.email!)! as String
+            ]) { (error) in
                 if error != nil {
                     print("Error occurred while saving the data to Firestore. \(error!)")
                 } else {

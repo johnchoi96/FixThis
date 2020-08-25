@@ -32,6 +32,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.requestCellIdent, for: indexPath) as! RequestTableViewCell
         cell.cellLabel.text = manager.requests[indexPath.row].original
         cell.isComplete = manager.requests[indexPath.row].isComplete
+        cell.submitterEmail.text = manager.requests[indexPath.row].submitterEmail
         return cell
     }
     
