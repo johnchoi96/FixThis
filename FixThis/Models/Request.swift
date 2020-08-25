@@ -14,4 +14,5 @@ struct Request {
     var revised: String
     var isComplete: Bool
     let documentId: String
+    let submitterEmail: String?
 }

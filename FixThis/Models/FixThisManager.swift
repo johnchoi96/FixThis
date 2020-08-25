@@ -32,7 +32,7 @@ class FixThisManager {
                 if let snapshotDocs = querySnapshot?.documents {
                     for doc in snapshotDocs {
                         let data = doc.data()
-                        let request = Request(original: data["original"] as! String, revised: data["revised"] as! String, isComplete: data["isComplete"] as! Bool, documentId: doc.documentID)
+                        let request = Request(original: data["original"] as! String, revised: data["revised"] as! String, isComplete: data["isComplete"] as! Bool, documentId: doc.documentID, submitterEmail: data["submitter"] as! String?)
                         self.requests.append(request)
                     }
                     DispatchQueue.main.async {

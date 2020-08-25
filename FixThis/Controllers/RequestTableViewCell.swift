@@ -13,6 +13,7 @@ class RequestTableViewCell: UITableViewCell {
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var completeIndicator: UIView!
     @IBOutlet weak var incompleteIndicator: UIView!
+    @IBOutlet weak var submitterEmail: UILabel!
     
     var isComplete: Bool {
         get {
