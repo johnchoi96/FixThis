@@ -15,6 +15,7 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var originalTextView: UITextView!
     @IBOutlet weak var revisedTextView: UITextView!
     @IBOutlet weak var isCompleteSwitch: UISwitch!
+    @IBOutlet weak var copyButton: UIButton!
     
     var request: Request!
     
@@ -36,11 +37,15 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
         
         originalTextView.backgroundColor = .darkGray
         originalTextView.textColor = .white
+        revisedTextView.textColor = .white
         if isCompleteSwitch.isOn {
             revisedTextView.isEditable = false
             revisedTextView.backgroundColor = .darkGray
-            revisedTextView.textColor = .white
+        } else {
+            revisedTextView.isEditable = true
+            revisedTextView.backgroundColor = .opaqueSeparator
         }
+        copyButton.isHidden = isCompleteSwitch.isOn
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -50,6 +55,7 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func copyButtonPressed(_ sender: UIButton) {
         revisedTextView.text = originalTextView.text
+        updateData()
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -58,6 +64,14 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func completeSwitchPressed(_ sender: UISwitch) {
         updateData()
+        if isCompleteSwitch.isOn {
+            revisedTextView.isEditable = false
+            revisedTextView.backgroundColor = .darkGray
+        } else {
+            revisedTextView.isEditable = true
+            revisedTextView.backgroundColor = .opaqueSeparator
+        }
+        copyButton.isHidden = sender.isOn
     }
     
     private func updateData() {
@@ -77,15 +91,5 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
         }
         
         request.isComplete = isCompleteSwitch.isOn
-        
-        if isCompleteSwitch.isOn {
-            revisedTextView.isEditable = false
-            revisedTextView.backgroundColor = .darkGray
-            revisedTextView.textColor = .white
-        } else {
-            revisedTextView.isEditable = true
-            revisedTextView.backgroundColor = .opaqueSeparator
-            revisedTextView.textColor = .black
-        }
     }
 }

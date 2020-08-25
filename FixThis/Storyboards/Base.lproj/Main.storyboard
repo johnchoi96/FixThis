@@ -180,6 +180,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Request Detail" id="Shc-Pa-kBD"/>
                     <connections>
+                        <outlet property="copyButton" destination="G9B-8f-mkC" id="zMp-hp-tHs"/>
                         <outlet property="isCompleteSwitch" destination="4hf-Ji-tYQ" id="3Dg-iw-g2j"/>
                         <outlet property="originalTextView" destination="mFs-m9-jTe" id="0Es-Jc-jVF"/>
                         <outlet property="revisedTextView" destination="0xp-AL-9W7" id="t5R-sX-0GL"/>
