@@ -20,6 +20,12 @@ class WelcomeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         signupButton.layer.cornerRadius = 25
         loginButton.layer.cornerRadius = 25
+        
+        // MARK: BETA ALERT
+        let alert = UIAlertController(title: "BETA SOFTWARE DISCLAIMER", message: "This app is in beta, therefore do expect issues within the app.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "I understand", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

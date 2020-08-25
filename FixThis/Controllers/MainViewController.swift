@@ -58,7 +58,22 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    @IBAction func addPressed(_ sender: UIBarButtonItem) {
+    @IBAction func actionPressed(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Choose", message: "You can submit request or view app information", preferredStyle: .actionSheet)
+        let addAction = UIAlertAction(title: "Submit Request", style: .default) { (action) in
+            self.addRequest()
+        }
+        let appInfoAction = UIAlertAction(title: "View App Info", style: .default) { (action) in
+            self.performSegue(withIdentifier: K.Segues.mainToAppinfo, sender: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        alert.addAction(addAction)
+        alert.addAction(appInfoAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func addRequest() {
         performSegue(withIdentifier: K.Segues.mainToSubmitRequest, sender: nil)
     }
     

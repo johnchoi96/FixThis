@@ -45,9 +45,9 @@
                                 <action selector="logoutPressed:" destination="BYZ-38-t0r" id="9NO-Cz-iJD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XQ3-3O-3Op">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="XQ3-3O-3Op">
                             <connections>
-                                <action selector="addPressed:" destination="BYZ-38-t0r" id="SXc-Yt-AMK"/>
+                                <action selector="actionPressed:" destination="BYZ-38-t0r" id="azq-Ud-UvC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,11 +55,77 @@
                         <outlet property="table" destination="9fg-pD-UDF" id="3hb-ol-enb"/>
                         <segue destination="7UK-w6-bcC" kind="presentation" identifier="mainToSubmitRequest" id="M9n-DB-Bg1"/>
                         <segue destination="Xyz-UX-cZ3" kind="show" identifier="mainToRequestDetail" id="FiJ-pv-m2n"/>
+                        <segue destination="Dyr-b2-brr" kind="presentation" identifier="mainToAppinfo" id="69z-eY-qJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1985" y="137"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="NXU-GA-ax7">
+            <objects>
+                <viewController id="Dyr-b2-brr" customClass="AboutViewController" customModule="FixThis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8eo-0X-0gI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fix This 🛠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02e-fX-Bhh">
+                                <rect key="frame" x="105.66666666666667" y="100" width="163.66666666666663" height="45.666666666666657"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQT-oy-pJ1">
+                                <rect key="frame" x="40" y="602" width="295" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Developer Website">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="devWebsitePressed:" destination="Dyr-b2-brr" eventType="touchUpInside" id="lK9-Nu-Srj"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rmr-uR-7ue">
+                                <rect key="frame" x="40" y="279" width="295" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ggQ-ar-yb9"/>
+                                </constraints>
+                                <string key="text">Developers:
+
+- John Choi 
+(johnchoi1003@icloud.com)
+- Ellie Chung 
+(chung.821@osu.edu)
+</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rmr-uR-7ue" firstAttribute="leading" secondItem="9wJ-4k-IfR" secondAttribute="leading" constant="40" id="1TK-QG-2u1"/>
+                            <constraint firstItem="02e-fX-Bhh" firstAttribute="top" secondItem="9wJ-4k-IfR" secondAttribute="top" constant="100" id="ASd-93-Kha"/>
+                            <constraint firstItem="rmr-uR-7ue" firstAttribute="centerX" secondItem="8eo-0X-0gI" secondAttribute="centerX" id="LJT-mD-GK3"/>
+                            <constraint firstItem="9wJ-4k-IfR" firstAttribute="trailing" secondItem="rmr-uR-7ue" secondAttribute="trailing" constant="40" id="Ojq-TR-bN2"/>
+                            <constraint firstItem="02e-fX-Bhh" firstAttribute="centerX" secondItem="8eo-0X-0gI" secondAttribute="centerX" id="bn4-GJ-jfe"/>
+                            <constraint firstItem="rmr-uR-7ue" firstAttribute="centerY" secondItem="8eo-0X-0gI" secondAttribute="centerY" id="cA8-GY-scP"/>
+                            <constraint firstItem="9wJ-4k-IfR" firstAttribute="trailing" secondItem="TQT-oy-pJ1" secondAttribute="trailing" constant="40" id="jv6-pB-NGy"/>
+                            <constraint firstItem="9wJ-4k-IfR" firstAttribute="bottom" secondItem="TQT-oy-pJ1" secondAttribute="bottom" constant="80" id="sd6-pe-R95"/>
+                            <constraint firstItem="TQT-oy-pJ1" firstAttribute="leading" secondItem="9wJ-4k-IfR" secondAttribute="leading" constant="40" id="uX7-A7-10c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9wJ-4k-IfR"/>
+                    </view>
+                    <connections>
+                        <outlet property="devWebsiteButton" destination="TQT-oy-pJ1" id="NMa-bC-xcT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZi-Lj-baK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373.5999999999999" y="1160.8374384236454"/>
         </scene>
         <!--Request Detail-->
         <scene sceneID="8cV-qU-kSF">

@@ -22,6 +22,7 @@ struct K {
         static let signupToMain = "signupToMain"
         static let welcomeToSignup = "welcomeToSignup"
         static let welcomeToLogin = "welcomeToLogin"
+        static let mainToAppinfo = "mainToAppinfo"
     }
     
     /**

@@ -30,6 +30,7 @@
 		D2836C3F24F49B7700E6B453 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C3E24F49B7700E6B453 /* LogInViewController.swift */; };
 		D2836C4124F49B7F00E6B453 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C4024F49B7F00E6B453 /* SignUpViewController.swift */; };
 		D2836C4424F49F2300E6B453 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2836C4324F49F2300E6B453 /* KeychainSwift */; };
+		D2836C4624F4AF1400E6B453 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2836C4524F4AF1400E6B453 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		D2836C3C24F49B5400E6B453 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D2836C3E24F49B7700E6B453 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		D2836C4024F49B7F00E6B453 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D2836C4524F4AF1400E6B453 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				D2836C3C24F49B5400E6B453 /* WelcomeViewController.swift */,
 				D2836C3E24F49B7700E6B453 /* LogInViewController.swift */,
 				D2836C4024F49B7F00E6B453 /* SignUpViewController.swift */,
+				D2836C4524F4AF1400E6B453 /* AboutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				D2836C2D24F333F000E6B453 /* SubmitRequestViewController.swift in Sources */,
 				D2836C0B24F3209300E6B453 /* MainViewController.swift in Sources */,
 				D2836C2A24F32F3E00E6B453 /* RequestTableViewCell.swift in Sources */,
+				D2836C4624F4AF1400E6B453 /* AboutViewController.swift in Sources */,
 				D2836C3624F438EB00E6B453 /* RequestDetailViewController.swift in Sources */,
 				D2836C3424F3930600E6B453 /* FirebaseDataUpdateDelegate.swift in Sources */,
 				D2836C1E24F3216200E6B453 /* FixThisManager.swift in Sources */,
