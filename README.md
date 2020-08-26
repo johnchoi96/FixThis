@@ -3,6 +3,10 @@
 ## Description
 Ever needed a place to upload a text to have someone take a look at your writing skills? `FixThis` app does this for you!
 
+## Platform
+* iOS
+* iPadOS
+
 ## Developers
 
 * John Choi
