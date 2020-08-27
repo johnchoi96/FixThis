@@ -5,7 +5,7 @@ Ever needed a place to upload a text to have someone take a look at your writing
 
 ## Platform
 * iOS (13.0 or higher)
-* iPadOS (13.6 or higher)
+* iPadOS (13.0 or higher)
 * macOS (10.15 or higher)
 
 ## Developers
