@@ -81,7 +81,7 @@ class RequestDetailViewController: UIViewController, UITextViewDelegate {
             "revised": revisedTextView.text ?? "",
             "isComplete": isCompleteSwitch.isOn,
             "timestamp": Date().timeIntervalSince1970,
-            "submitter": (Auth.auth().currentUser?.email!)!
+            "submitter": request.submitterEmail!
         ]) { error in
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: "Error while updating data\n\(error)", preferredStyle: .alert)
