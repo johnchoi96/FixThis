@@ -6,7 +6,6 @@ target 'FixThis' do
   use_frameworks!
 
   # Pods for FixThis
-  pod 'Firebase'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Auth'

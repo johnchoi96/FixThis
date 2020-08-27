@@ -71,6 +71,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         alert.addAction(addAction)
         alert.addAction(appInfoAction)
         alert.addAction(cancelAction)
+        // for iPadOS and macOS
+        if let popoverController = alert.popoverPresentationController {
+            popoverController.barButtonItem = sender
+        }
         self.present(alert, animated: true, completion: nil)
     }
     
