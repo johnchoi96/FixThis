@@ -21,7 +21,7 @@ class AboutViewController: UIViewController {
     }
     
     @IBAction func devWebsitePressed(_ sender: UIButton) {
-        let url = URL(string: "https://johnchoi96.github.io/FixThis-iOS/")
+        let url = URL(string: "https://johnchoi96.github.io/FixThis/")
         let vc = SFSafariViewController(url: url!)
         self.present(vc, animated: true, completion: nil)
     }
